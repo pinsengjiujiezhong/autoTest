@@ -141,6 +141,90 @@ def hover(element):
     raise err
 
 
+def context_click(element):
+    for i in range(repeat_operation_num):
+        try:
+            ActionChains(driver).context_click(find_element(element)).perform()
+            return
+        except Exception as e:
+            err = e
+        time.sleep(fail_wait_time)
+    allure.attach(driver.get_screenshot_as_png(), '鼠标右键事件错误', allure.attachment_type.PNG)
+    raise err
+
+
+def double_click(element):
+    for i in range(repeat_operation_num):
+        try:
+            ActionChains(driver).double_click(find_element(element)).perform()
+            return
+        except Exception as e:
+            err = e
+        time.sleep(fail_wait_time)
+    allure.attach(driver.get_screenshot_as_png(), '鼠标双击事件错误', allure.attachment_type.PNG)
+    raise err
+
+
+def drag_and_drop(source, target):
+    for i in range(repeat_operation_num):
+        try:
+            ActionChains(driver).drag_and_drop(source, target).perform()
+            return
+        except Exception as e:
+            err = e
+        time.sleep(fail_wait_time)
+    allure.attach(driver.get_screenshot_as_png(), '鼠标拖拽事件错误', allure.attachment_type.PNG)
+    raise err
+
+
+def switch_to_alert(Boole=True):
+    for i in range(repeat_operation_num):
+        try:
+            if Boole:
+                driver.swtich_to_alert().accept()
+            else:
+                driver.switch_to_alert().dismiss()
+            return
+        except Exception as e:
+            err = e
+        time.sleep(fail_wait_time)
+    allure.attach(driver.get_screenshot_as_png(), '处理警告框逻辑错误', allure.attachment_type.PNG)
+    raise err
+
+
+def switch_to_frame(element):
+    for i in range(repeat_operation_num):
+        try:
+            driver.switch_to_frame(find_element(element))
+            return
+        except Exception as e:
+            err = e
+        time.sleep(fail_wait_time)
+    allure.attach(driver.get_screenshot_as_png(), '切换frame逻辑错误', allure.attachment_type.PNG)
+
+
+def switch_to_window(num=1):
+    for i in range(repeat_operation_num):
+        try:
+            all_handles = driver.window_handles
+            driver.switch_to_window(all_handles[num])
+            return
+        except Exception as e:
+            err = e
+        time.sleep(fail_wait_time)
+    allure.attach(driver.get_screenshot_as_png(), '切换handle逻辑错误', allure.attachment_type.PNG)
+
+
+# 结束当前iframe
+def switch_to_default_content(self):
+    self.driver.switch_to.default_content()
+
+
+# 切换至上层iframe
+def switch_to_parent_frame(self):
+    self.driver.switch_to.parent_frame()
+
+
 def attr(key, element=None, e=None):
     assert element or e
     for i in range(repeat_operation_num):

@@ -1,4 +1,0 @@
-﻿编号,模块,用例名称,函数名称,优先级
-SNG-001,客户,素材列表,material_list,1
-SNG-001,联系人,删除素材,del_material,2
-SNG-001,客户,退出后台,background_quit,3
