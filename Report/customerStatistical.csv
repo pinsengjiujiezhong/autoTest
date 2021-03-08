@@ -1,0 +1,20 @@
+执行开始时间,2019-10-27 12:13:52,执行结束时间,2019-10-27 12:14:52
+耗时（秒）,0时1分0秒
+用例总数,3
+用例初始通过数,2,用例初始通过率,66.67%
+用例初始失败数,1,用例初始失败率,33.33%
+用例重跑后通过数,3,用例重跑通过率,100.00%
+用例重跑后失败数,0,用例重跑失败率,0.00%
+""
+""
+""
+用例详细报告
+SNG-001,客户,素材列表,material_list,True,True
+SNG-001,联系人,删除素材,del_material,True,True
+SNG-001,客户,退出后台,background_quit,False,"""Message: no such element: Unable to locate element: {""""method"""":""""css selector""""","""""selector"""":"""".avatar""""}  (Session info: chrome=77.0.3865.120)"""
+""""""
+""""""
+""""""
+""""""
+b'\xd6\xd8\xc5\xdc\xb5\xc4\xd3\xc3\xc0\xfd'
+SNG-001,客户,退出后台,background_quit,True,True

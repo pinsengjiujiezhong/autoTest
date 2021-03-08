@@ -1,0 +1,9 @@
+SNG-001,客户,素材列表,material_list,True,True
+SNG-001,联系人,删除素材,del_material,True,True
+SNG-001,客户,退出后台,background_quit,False,"Message: no such element: Unable to locate element: {""method"":""css selector"",""selector"":"".avatar""}  (Session info: chrome=77.0.3865.120)"
+""
+""
+""
+""
+b'\xd6\xd8\xc5\xdc\xb5\xc4\xd3\xc3\xc0\xfd'
+SNG-001,客户,退出后台,background_quit,True,True
